@@ -2,9 +2,9 @@ run:
 	mkdir streams/`date '+%Y%m%d%H_%M_%S'`
 	go run main.go | ffmpeg -f rawvideo \
 	 	-pixel_format bgr24 \
-	 	-framerate 2 \
 	 	-video_size 1280x720 \
 		-i - \
+		-framerate 2 \
 		-vcodec libx264 \
 	 	-acodec copy \
 	 	-pix_fmt yuv420p \
