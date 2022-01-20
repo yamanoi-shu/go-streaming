@@ -9,8 +9,8 @@ run:
 	 	-acodec copy \
 	 	-pix_fmt yuv420p \
 		-color_range 2 \
-		-g 50 \
-	 	-keyint_min 50 \
+		-g 24 \
+	 	-keyint_min 24 \
 		-sc_threshold 0 \
 		-segment_time 1 \
 		-hls_list_size 0 \

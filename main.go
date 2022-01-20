@@ -7,8 +7,9 @@ import (
 )
 
 func main() {
-	webcam, _ := gocv.OpenVideoCapture(1)
-	window := gocv.NewWindow("Hello")
+	webcam, _ := gocv.OpenVideoCapture(0)
+	webcam.Set(gocv.VideoCaptureFPS, 24)
+	window := gocv.NewWindow("hls-sample")
 	img := gocv.NewMat()
 
 	for {
